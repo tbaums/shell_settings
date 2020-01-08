@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export GOPATH=$HOME/go
-
+export PATH="/usr/local:/usr/local/Cellar/pyenv-virtualenv/1.1.3/shims:/Users/michael/.pyenv/shims:/Users/michael/.krew/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/michael/google-cloud-sdk/bin:/Users/michael/go/bin:/usr/local/go"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/michael/.oh-my-zsh"
@@ -116,10 +116,11 @@ alias kga="kubectl get all --all-namespaces"
 alias kd="kubectl describe"
 alias kdp="kubectl describe pod"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/usr/local:/usr/local/Cellar/pyenv-virtualenv/1.1.3/shims:/Users/michael/.pyenv/shims:/Users/michael/.krew/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/michael/google-cloud-sdk/bin:/usr/local/Cellar/pyenv-virtualenv/1.1.3/shims:/Users/michael/.pyenv/shims:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Users/michael/konvoy_latest:/Users/michael/go/bin:/usr/local/go"
 export LDFLAGS="-L/usr/local/opt/icu4c/lib"
 export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+
+# Start pyenv at startup time
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 

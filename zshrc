@@ -13,19 +13,27 @@ export ZSH="/Users/michael/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="af-magic"
 
+_fix_cursor() {
+     echo -ne '\e[5 q'
+   }
+
+precmd_functions+=(_fix_cursor)
 # Change the highlight color to be readable
 # # Declare the variable
 typeset -A ZSH_HIGHLIGHT_STYLES
 #
 # # To differentiate aliases from other command types
-ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+#ZSH_HIGHLIGHT_STYLES[alias]='fg=cyan,bold'
 #
 # # To have paths colored instead of underlined
-ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+#ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 #
 # # To disable highlighting of globbing expressions
-ZSH_HIGHLIGHT_STYLES[globbing]='none'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=black'
 #
+# # To turn char  dark against bright cursor
+ZSH_HIGHLIGHT_STYLES[cursor]='fg=blue'
+
 
 
 # Set list of themes to pick from when loading at random
